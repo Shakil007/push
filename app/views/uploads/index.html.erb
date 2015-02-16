@@ -1,0 +1,13 @@
+<div class="row">
+<% @uploads.each do |upload| %>
+<div class="col-sm-6 col-md-3">
+<div class="thumbnail">
+<%= link_to (image_tag upload.uploaded_file.url.to_s), upload %>
+</div>
+</div>
+<% end %>
+</div>
+
+<br>
+
+<%= link_to 'New Upload', new_upload_path, class: "btn btn-success btn-lg" %>
